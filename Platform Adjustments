@@ -1,0 +1,13 @@
+# Platform Adjustments
+
+## Windows
+- Keep PowerShell strings like `Invoke-Expression`, `FromBase64String`.
+- Keep registry and `.dll` references.
+
+## Linux / macOS
+- Focus on `/bin/sh`, `bash -c`, `/etc/rc.local`, `crontab`.
+- macOS-specific: `Library/LaunchAgents`, `launchctl`, `.plist` persistence.
+
+## Customizing
+- To remove macOS from cross‑platform rules: delete lines referencing `Library/LaunchAgents` or adjust string sets.
+- For Linux‑only scanning: drop Windows strings and focus on shell tools and cron entries.
